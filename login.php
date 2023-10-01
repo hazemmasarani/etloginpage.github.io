@@ -12,14 +12,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Validate the Email and password
     if ($postedEmail === $validEmail && $postedPassword === $validPassword) {
         // Email and password are valid
-        $response = array("status" => "success", "message" => "Login successful");
+        //$response = array("status" => "success", "message" => "Login successful");
+        $response = '<h1> Login successful </h1>';
     } else {
         // Email and/or password are invalid
-        $response = array("status" => "error", "message" => "Invalid Email or password");
+        //$response = array("status" => "error", "message" => "Invalid Email or password");
+        $response = '<h1> Invalid Email or password </h1>';
     }
 } else {
     // If the request is not a POST request, return an error
-    $response = array("status" => "error", "message" => "Invalid request method");
+    //$response = array("status" => "error", "message" => "Invalid request method");
+    $response = '<h1> Invalid request method </h1>';
 }
 
 // Set the response content type to JSON
